@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "course_work_backend": {
+      "main": "src/course_work_backend/main.mo",
+      "type": "motoko"
+    },
+    "course_work_frontend": {
+      "dependencies": [
+        "course_work_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/course_work_frontend/src/index.html"
+      },
+      "source": [
+        "src/course_work_frontend/assets",
+        "dist/course_work_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
